@@ -1,6 +1,6 @@
 {
   "name": "shell-profile",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get default shell profile path",
   "main": "index.js",
   "scripts": {
