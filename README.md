@@ -7,7 +7,7 @@
 ```js
 const shellProfile = require('shell-profile');
 console.log('profile: %s', shellProfile());
-//=> /Users/vladimyr/.zshrc
+//=> profile: /Users/vladimyr/.zshrc
 ```
 
 # API
@@ -28,7 +28,7 @@ Synchronously gets default shell profile path
 ```javascript
 const profile = require('shell-profile')();
 console.log('profile: %s', profile);
-//=> /Users/vladimyr/.zshrc
+//=> profile: /Users/vladimyr/.zshrc
 ```
 
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?>** profile path

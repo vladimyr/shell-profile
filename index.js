@@ -15,7 +15,7 @@ const shellVar = name => name.startsWith('$') ? name : `$${name}`;
  * @example
  * const profile = require('shell-profile')();
  * console.log('profile: %s', profile);
- * //=> /Users/vladimyr/.zshrc
+ * //=> profile: /Users/vladimyr/.zshrc
  */
 module.exports = mem(function () {
   const $HOME = require('os').homedir();
