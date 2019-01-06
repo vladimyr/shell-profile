@@ -36,7 +36,8 @@ module.exports = mem(function () {
 
 function env(...vars) {
   const shellVars = vars.map(it => shellVar(it));
-  const cmd = `echo -n "${shellVars.join(':')}"; exit;`;
-  const result = execFileSync(process.env.SHELL, ['-ilc', cmd], { encoding: 'utf8' });
-  return result.trim().split(':');
+  const cmd = `echo -n "${shellVars.join('\n')}"; exit;`;
+  const options = { stdio: 'pipe', encoding: 'utf-8' };
+  const result = execFileSync(process.env.SHELL, ['-ilc', cmd], options);
+  return result.trim().split('\n');
 }
