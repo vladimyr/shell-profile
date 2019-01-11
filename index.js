@@ -38,6 +38,6 @@ function env(...vars) {
   const shellVars = vars.map(it => shellVar(it));
   const cmd = `echo -n "${shellVars.join('\n')}"; exit;`;
   const options = { stdio: 'pipe', encoding: 'utf-8' };
-  const result = execFileSync(process.env.SHELL, ['-ilc', cmd], options);
+  const result = execFileSync(process.env.SHELL, ['-c', cmd], options);
   return result.split('\n').slice(0, vars.length);
 }
